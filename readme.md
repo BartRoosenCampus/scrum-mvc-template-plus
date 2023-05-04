@@ -1,11 +1,10 @@
-# Basic version
+# Basic plus version
 
 ----
-*Deze is de meest basic versie. Weinig of geen 
-voorgeprogrammeerde functionaliteit. 
-Dit template biedt eigenlijk enkel een 
-folderstructuur die gebruikt kan worden 
-voor het scrumproject.*
+*Deze versie is gebaseerd op de "basic" versie. Met dat verschil dat deze "plus"
+versie twig gebruikt. Hiervoor bestaat er een TwigService als tussenlaag om de 
+pagina's gemakkelijker te renderen en te voorzien van data. Verder geen 
+voorgeprogrammeerde features*
 
 ## Folders
 
@@ -16,7 +15,6 @@ voor het scrumproject.*
 - hier komen de controllers
 - index.php: dient om de user naar de homepagina te sturen, heeft verder geen functie [info](index.php)
 - database.sql: hierin kan het script voor het maken van de database worden bewaard [info](database.sql)
-- bootstrap.php = autoloader [info](bootstrap.php)
 - .gitignore [info](.gitignore)
 
 ### App
@@ -37,13 +35,18 @@ voor het scrumproject.*
 
 ### App/Services
 
-- Lege folder [info](App/Services/readme.md)
+- [TwigService.php](App/Services/TwigService.php)
+- [Readme.md](App/Services/readme.md)
 
 ### App/Views
 
-Hier bevinden zich enkele files die als voorbeeld kunnen dienen voor andere pagina’s.
-De head en navbar van deze voorbeeldpagina vind je terug in “App/Views/components”. 
-[info](App/Views/readme.md)
+- [base.twig](App/Views/base.twig): deze file bevat de structuur van elke pagina die deze "template" extend
+- App/Views/components/: deze folder bevat enkele componenten die gemeenschappelijk zijn voor alle webpagina's
+  - [head.twig](App/Views/components/head.twig): de head van de webpages
+  - [navbar.twig](App/Views/components/navbar.twig): de navbar
+
+Het spreekt voor zich dat het hier om een voorbeeld gaat en dat de structuur van 
+de pagina's en hun inhoud (componenten) kan worden aangepast naar believen.
 
 ### public
 
